@@ -1,3 +1,8 @@
+/* 
+*Name: Jamar Bailey III
+*/
+
+
 package org.howard.edu.lsp.assignment2;
 
 import java.io.FileNotFoundException;
