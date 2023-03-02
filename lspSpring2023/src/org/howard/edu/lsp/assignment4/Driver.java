@@ -1,6 +1,13 @@
 //Name: Jamar Bailey III
 package org.howard.edu.lsp.assignment4;
 
+import java.util.Scanner;
+
+/**
+ * The Driver utilizes test cases stored inside itself and the methods created in IntegerSet.java.
+ * Test cases are ran here with basic ones presented below.
+ * @return set
+ */
 public class Driver {
 
     public static void main(String[] args) {

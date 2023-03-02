@@ -4,6 +4,12 @@ package org.howard.edu.lsp.assignment4;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class represents an integer set, which is a collection of integers.
+ * It provides methods for adding, removing, and manipulating the set.
+ * @author Jamar
+ */
+
 public class IntegerSet {
     // Hint: probably best to use an array list.  You will need to do a little research
     private List<Integer> set = new ArrayList<Integer>();
@@ -17,7 +23,7 @@ public class IntegerSet {
         set.clear();
     }
 
-    // Returns the length of the set
+    // Returns length of the set
     public int length() {
         return set.size();
     }
