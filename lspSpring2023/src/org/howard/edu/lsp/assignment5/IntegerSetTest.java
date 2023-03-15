@@ -142,6 +142,35 @@ public class IntegerSetTest {
         intSetb.add(3);
         integerSet.diff(intSetb);
         Assertions.assertEquals(1, integerSet.length());
+        
+        
+     // Test case 2: diff with set having common elements
+        integerSet.clear();
+        integerSet.add(1);
+        integerSet.add(2);
+        IntegerSet intSetc = new IntegerSet();
+        intSetc.add(2);
+        intSetc.add(3);
+        integerSet.diff(intSetc);
+        Assertions.assertEquals(1, integerSet.length());
+        Assertions.assertTrue(integerSet.contains(1));
+        Assertions.assertFalse(integerSet.contains(2));
+        Assertions.assertFalse(integerSet.contains(3));
+        
+        
+        // Test case 3: diff with set having no common elements
+        integerSet.clear();
+        integerSet.add(1);
+        integerSet.add(2);
+        IntegerSet intSetd = new IntegerSet();
+        intSetd.add(3);
+        intSetd.add(4);
+        integerSet.diff(intSetd);
+        Assertions.assertEquals(2, integerSet.length());
+        Assertions.assertTrue(integerSet.contains(1));
+        Assertions.assertTrue(integerSet.contains(2));
+        Assertions.assertFalse(integerSet.contains(3));
+        Assertions.assertFalse(integerSet.contains(4));
     }
 
     @Test
