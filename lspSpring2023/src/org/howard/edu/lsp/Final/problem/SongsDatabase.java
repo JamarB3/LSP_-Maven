@@ -38,7 +38,7 @@ public class SongsDatabase {
                 return genre;
             }
         }
-		// If the song title is not found, return null.
+		// If the song title is not found, return null
         return null;
     }
 
