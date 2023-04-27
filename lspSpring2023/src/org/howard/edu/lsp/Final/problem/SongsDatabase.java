@@ -31,7 +31,15 @@ public class SongsDatabase {
 
 	/* Return genre, i.e., jazz, given a song title */
 	public String getGenreOfSong(String songTitle) {
-			// Code it!!
-	}
+		// Loop over each entry in the map and check if the set of songs within a genre have a song title
+        // If found, return the current genre
+		for (String genre : map.keySet()) {
+            if (map.get(genre).contains(songTitle)) {
+                return genre;
+            }
+        }
+		// If the song title is not found, return null.
+        return null;
+    }
 
 }
