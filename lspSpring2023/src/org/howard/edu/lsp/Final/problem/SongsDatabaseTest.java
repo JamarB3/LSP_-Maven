@@ -18,6 +18,7 @@ public class SongsDatabaseTest {
 	}
 
 	@Test
+	@DisplayName("tests AddSong")
 	public void testAddSong() {
 	    // Test case 1: add song to existing genre
 		SongsDatabase db = new SongsDatabase();
@@ -34,6 +35,7 @@ public class SongsDatabaseTest {
 	}
 
 	@Test
+	@DisplayName("tests GetSongs")
 	public void testGetSongs() {
 	    // Test case 1: get songs for existing genre
 		SongsDatabase db = new SongsDatabase();
@@ -50,6 +52,7 @@ public class SongsDatabaseTest {
 	}
 
 	@Test
+	@DisplayName("tests GetGenreOfSong")
 	public void testGetGenreOfSong() {
 	    // Test case 1: get genre for existing song
 		SongsDatabase db = new SongsDatabase();
