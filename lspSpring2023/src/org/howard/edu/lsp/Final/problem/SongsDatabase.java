@@ -1,17 +1,22 @@
 package org.howard.edu.lsp.Final.problem;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 
 public class SongsDatabase {
 	/* Key is the genre, HashSet contains associated songs */
-	private Map<String, HashSet<String>> map = 
-			new HashMap<String, HashSet<String>>();
+	private Map<String, HashSet<String>> map = new HashMap<String, HashSet<String>>();
 
 		/* Add a song title to a genre */
 	public void addSong(String genre, String songTitle) {
-			//Code it!!
-		}
-
+		if (!map.containsKey(genre)) {
+            map.put(genre, new HashSet<String>());
+        }
+        map.get(genre).add(songTitle);
+    }
 	/* Return the Set that contains all songs for a genre */
 	public Set<String> getSongs(String genre) {
 			// Code it!!
