@@ -30,8 +30,11 @@ public class SongsDatabaseTest {
 
 	    // Test case 2: add song to new genre
 	    db.addSong("Pop", "Shallow");
+	    db.addSong("Jazz", "My Favorite Things");
 	    Set<String> popSongs = db.getSongs("Pop");
+	    Set<String> jazzSongs = db.getSongs("Jazz");
 	    assertTrue(popSongs.contains("Shallow"));
+	    assertTrue(jazzSongs.contains("My Favorite Things"));
 	}
 
 	@Test
@@ -49,6 +52,8 @@ public class SongsDatabaseTest {
 	    // Test case 2: get songs for non-existent genre
 	    Set<String> jazzSongs = db.getSongs("Jazz");
 	    assertTrue(jazzSongs.isEmpty());
+	    Set<String> countrySongs = db.getSongs("Country");
+	    assertTrue(countrySongs.isEmpty());
 	}
 
 	@Test
